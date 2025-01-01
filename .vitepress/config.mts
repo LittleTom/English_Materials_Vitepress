@@ -50,6 +50,10 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/LittleTom/English_Materials_Vitepress' }
-    ]
+    ],
+
+    footer:{
+      copyright:"Copyright © 2019-PRESENT VOIDS.CN - Thanatos."
+    }
   }
 })
