@@ -7,7 +7,7 @@ export default defineConfig({
   title: "智慧线 · 英语 · 资料库",
   description: "智慧线 · 英语 · 资料库",
   themeConfig: {
-    logo: '/images/eng.png',
+    logo: '/images/eng.svg',
 
     search: {
       provider: "local",
@@ -49,7 +49,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/LittleTom/English_Materials_Vitepress' }
     ]
   }
 })

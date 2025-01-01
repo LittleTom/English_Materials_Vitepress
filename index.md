@@ -7,7 +7,7 @@ hero:
   text: "为初级、中级英语学习者撰写的英语学习手册"
   tagline: 语法 + 词汇 + 解题思路<br>教学内容涵盖：小学 · 初中 · 高中
   image:
-    src: /images/eng.png
+    src: /images/eng.svg
     alt: Logo
   actions:
     - theme: brand
