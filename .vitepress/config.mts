@@ -3,7 +3,7 @@ import { set_sidebar } from "./utils/auto_sidebar.mjs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/English_Materials_Vitepress",
+  base: "/English_Materials_Vitepress/",
   title: "智慧线 · 英语 · 资料库",
   description: "智慧线 · 英语 · 资料库",
   themeConfig: {
