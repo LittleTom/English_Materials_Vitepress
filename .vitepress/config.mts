@@ -5,8 +5,8 @@ import { set_sidebar } from "./utils/auto_sidebar.mjs";
 export default defineConfig({
   lang: 'zh-CN',
   // base: "/English_Materials_Vitepress/",
-  title: "智慧线 · 英语 · 资料库",
-  description: "智慧线 · 英语 · 资料库",
+  title: "英语 · 资料库",
+  description: "英语 · 资料库",
   themeConfig: {
     logo: '/images/logo/eng.svg',
 
@@ -71,7 +71,7 @@ export default defineConfig({
     },
 
     lastUpdated: {
-      text: '最后修改',
+      text: '最后更新于',
     },
 
     docFooter: {
@@ -79,5 +79,32 @@ export default defineConfig({
 			next: "下一页"
 		},
   },
-  lastUpdated: true
+  lastUpdated: true,
+
+  markdown: {
+    image: {
+      // 默认禁用；设置为 true 可为所有图片启用懒加载。
+      lazyLoading: true
+    },
+    
+    // 在markdown配置中自定义插件
+    config: (md) => {
+      // 自定义渲染规则
+      md.renderer.rules.text = function (tokens, idx) {
+        let content = tokens[idx].content;
+
+        // 使用正则表达式匹配自定义颜色标签
+        content = content.replace(/{:(color=[^}]+)}/g, (match, colorValue) => {
+          // 提取颜色值并包裹成 span 标签
+          const color = colorValue.split('=')[1];
+          return `<span style="color:${color};">`;
+        });
+
+        // 处理结束标签
+        content = content.replace(/{:color}/g, '</span>');
+
+        return content;
+      };
+    },
+  }
 })

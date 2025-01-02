@@ -60,8 +60,8 @@ This is a details block.
 
 **Output**
 
-::: info
-This is an info box.
+::: info 例句
+{:color=#ff0000}This{:color} is an info box.
 :::
 
 ::: tip
